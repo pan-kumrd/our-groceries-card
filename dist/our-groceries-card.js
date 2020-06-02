@@ -13429,7 +13429,7 @@ class OurGroceriesCard extends lit_element__WEBPACK_IMPORTED_MODULE_1__["LitElem
 
     // if list is already open then just close it
     const isOpen = this.openedLists[list.id];
-    if(isOpen){
+    if(isOpen && !this.config.expanded){
       this.openedLists[list.id] = false;
       this.openedLists = { ...this.openedLists};
       return;
